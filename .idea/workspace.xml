@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2a9189cb-c5e1-4418-95a9-36e444e7b337" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="2a9189cb-c5e1-4418-95a9-36e444e7b337" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/BikeSharingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BikeSharingTest.java" afterDir="false" />
+    </list>
+>>>>>>> 1688fac4c6fd78bf122258b470d17f2bcfba90c1
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -16,6 +22,37 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-138486764">
       <usages-collector id="statistics.lifecycle.project">
@@ -26,26 +63,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="gradle" value="1" />
-          <entry key="java" value="1" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="24" />
-          <entry key="java" value="129" />
+          <entry key="java" value="1133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="24" />
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="1133" />
         </counts>
       </usages-collector>
     </session>
@@ -81,26 +120,32 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1780858864">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="360" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="360" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.lifecycle.project" />
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BikeSharingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="420">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/path/BikeSharing.jar!/Models/User.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -425,10 +470,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -436,6 +481,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -451,27 +497,13 @@
             <path>
               <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="path" type="462c0819:PsiDirectoryNode" />
-              <item name="BikeSharing.jar" type="ab9368bb:PsiFileNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="path" type="462c0819:PsiDirectoryNode" />
-              <item name="BikeSharing.jar" type="ab9368bb:PsiFileNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="path" type="462c0819:PsiDirectoryNode" />
-              <item name="BikeSharing.jar" type="ab9368bb:PsiFileNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
@@ -491,11 +523,10 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542031277100" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542298932774" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -513,7 +544,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BikeSharingTest">
+  <component name="RunManager" selected="Gradle.Trabalho_ES2_JAP [build]">
     <configuration name="BikeSharingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -533,54 +564,66 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
-    <configuration name="BikeSharingTest.registerUser_Add" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Trabalho_ES2_JAP [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BikeSharingTest.registerUser_Add&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
-    <configuration name="BikeSharingTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BikeSharingTest.test1&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method v="2" />
+    <configuration name="BikeSharingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabalho_ES2_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BikeSharingTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BikeSharingTest.credit_add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabalho_ES2_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BikeSharingTest" />
+      <option name="METHOD_NAME" value="credit_add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BikeSharingTest.registerUser_Add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabalho_ES2_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BikeSharingTest" />
+      <option name="METHOD_NAME" value="registerUser_Add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Gradle.BikeSharingTest" />
-      <item itemvalue="Gradle.BikeSharingTest.test1" />
-      <item itemvalue="Gradle.BikeSharingTest.registerUser_Add" />
+      <item itemvalue="JUnit.BikeSharingTest.registerUser_Add" />
+      <item itemvalue="JUnit.BikeSharingTest" />
+      <item itemvalue="JUnit.BikeSharingTest.credit_add" />
+      <item itemvalue="Gradle.Trabalho_ES2_JAP [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BikeSharingTest" />
+        <item itemvalue="Gradle.Trabalho_ES2_JAP [build]" />
+        <item itemvalue="JUnit.BikeSharingTest.registerUser_Add" />
+        <item itemvalue="JUnit.BikeSharingTest.credit_add" />
         <item itemvalue="Gradle.BikeSharingTest" />
-        <item itemvalue="Gradle.BikeSharingTest.registerUser_Add" />
-        <item itemvalue="Gradle.BikeSharingTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -598,41 +641,48 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BikeSharingTest_test1 - 2018.11.14 at 15h 55m 11s.xml">
-      <configuration name="BikeSharingTest.test1" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest_registerUser_Add - 2018.11.14 at 16h 46m 07s.xml">
+      <configuration name="BikeSharingTest.registerUser_Add" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 15h 57m 14s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 16h 46m 30s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 15h 57m 25s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 01m 36s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 15h 57m 45s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 06m 44s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 16h 12m 10s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 07m 26s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 16h 12m 20s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 07m 35s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 16h 12m 41s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 08m 46s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest_registerUser_Add - 2018.11.14 at 16h 17m 40s.xml">
-      <configuration name="BikeSharingTest.registerUser_Add" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.14 at 17h 08m 56s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest_registerUser_Add - 2018.11.14 at 16h 17m 47s.xml">
-      <configuration name="BikeSharingTest.registerUser_Add" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.15 at 14h 38m 09s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BikeSharingTest - 2018.11.14 at 16h 17m 54s.xml">
-      <configuration name="BikeSharingTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="BikeSharingTest - 2018.11.15 at 16h 11m 54s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.52981967" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+>>>>>>> 1688fac4c6fd78bf122258b470d17f2bcfba90c1
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -642,21 +692,25 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4425532" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15409836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3328551" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19575857" />
+>>>>>>> 1688fac4c6fd78bf122258b470d17f2bcfba90c1
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32789558" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.15582451" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
@@ -670,13 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/path/BikeSharing.jar!/BikeRentalSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -705,9 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#664#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,15 +760,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="224">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.3.1/b03f607c0822a283c972e37eaeacb00dc3a3c2e7/junit-jupiter-api-5.3.1-sources.jar!/org/junit/jupiter/api/Assertions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="396" lean-forward="true" selection-start-line="396" selection-end-line="396" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/path/BikeSharing.jar!/BikeRentalSystem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BikeSharingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="420">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
