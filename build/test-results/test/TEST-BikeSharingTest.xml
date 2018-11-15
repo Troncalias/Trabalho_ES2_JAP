@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BikeSharingTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-11-15T15:18:58" hostname="Toshiba-PC" time="0.043">
+<testsuite name="BikeSharingTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2018-11-15T16:23:34" hostname="DESKTOP-SJLNRU1" time="0.048">
   <properties/>
-  <testcase name="testId_BRF1()" classname="BikeSharingTest" time="0.017"/>
+  <testcase name="testId_BRF1()" classname="BikeSharingTest" time="0.014"/>
   <testcase name="testId_BRF2()" classname="BikeSharingTest" time="0.001"/>
-  <testcase name="testId_BRF3()" classname="BikeSharingTest" time="0.0"/>
+  <testcase name="testId_BRF3()" classname="BikeSharingTest" time="0.001"/>
   <testcase name="testId_BRF4()" classname="BikeSharingTest" time="0.001"/>
   <testcase name="testId_CA1()" classname="BikeSharingTest" time="0.002"/>
-  <testcase name="testId_RU1()" classname="BikeSharingTest" time="0.004"/>
-  <testcase name="testId_RU2()" classname="BikeSharingTest" time="0.001"/>
-  <testcase name="testId_VC1()" classname="BikeSharingTest" time="0.003"/>
-  <testcase name="testId_VC2()" classname="BikeSharingTest" time="0.002"/>
+  <testcase name="testId_RB1()" classname="BikeSharingTest" time="0.001"/>
+  <testcase name="testId_RB2()" classname="BikeSharingTest" time="0.003"/>
+  <testcase name="testId_RB3()" classname="BikeSharingTest" time="0.001"/>
+  <testcase name="testId_RB4()" classname="BikeSharingTest" time="0.001"/>
+  <testcase name="testId_RB5()" classname="BikeSharingTest" time="0.001"/>
+  <testcase name="testId_RB6()" classname="BikeSharingTest" time="0.001"/>
+  <testcase name="testId_RU1()" classname="BikeSharingTest" time="0.003"/>
+  <testcase name="testId_RU2()" classname="BikeSharingTest" time="0.0"/>
+  <testcase name="testId_VC1()" classname="BikeSharingTest" time="0.002"/>
+  <testcase name="testId_VC2()" classname="BikeSharingTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

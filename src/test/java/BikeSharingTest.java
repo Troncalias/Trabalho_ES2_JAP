@@ -1,5 +1,6 @@
 
 import Exceptions.UserAlreadyExists;
+import Exceptions.UserDoesNotExists;
 import Models.User;
 import org.junit.jupiter.api.Test;
 
@@ -74,10 +75,68 @@ public class BikeSharingTest {
         int valorCaculo = 10*30 + ((35-10)-10) * 30/2;
         assertEquals(rentalvalue, valorCaculo);
     }
+
     @Test
     public void testId_BRF4(){
         BikeRentalSystem i = new BikeRentalSystem(10);
         int rentalvalue = i.bicycleRentalFee(2, 10, 30, 10);
         assertEquals(rentalvalue, 0);
     }
+
+    @Test
+    public void testId_RB1(){ //todos não existem
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int retorna = i.returnBicycle(1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    @Test
+    public void testId_RB2(){ //id user nao existe
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        int retorna = i.returnBicycle(1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    @Test
+    public void testId_RB3() throws UserAlreadyExists { //id deposito nao existe
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        int retorna = i.returnBicycle(1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    @Test
+    public void testId_RB4() throws UserAlreadyExists { //bike nao associada
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addBicycle(1,1,1);
+        int retorna = i.returnBicycle(1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    @Test
+    public void testId_RB5() throws UserAlreadyExists, UserDoesNotExists { //User, deposito e bike associada existem e lugar não livre
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 10);
+        i.addBicycle(1,1,2);
+        int retorna = i.returnBicycle(1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    @Test
+    public void testId_RB6() throws UserAlreadyExists, UserDoesNotExists { //User, deposito e bike associada existem e lugar livre
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 10);
+        i.returnBicycle(1, 1, 20);
+        List<User> list = i.getUsers();
+        assertEquals(list.get(0).getCredit(), 500 - i.bicycleRentalFee(1,10,20,5));
+    }
+
 }
