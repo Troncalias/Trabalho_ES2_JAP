@@ -25,7 +25,28 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Trabalho_ES2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -96,14 +117,38 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1780858864">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="360" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="360" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.lifecycle.project" />
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BikeSharingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="401">
+              <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -447,47 +492,18 @@
           <expand>
             <path>
               <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="path" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trabalho_ES2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trabalho_ES2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalho_ES2_JAP" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542215283866" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542295217976" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -505,7 +521,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BikeSharingTest">
+  <component name="RunManager" selected="Gradle.Trabalho_ES2_JAP [build]">
     <configuration name="BikeSharingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -525,19 +541,18 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
-    <configuration name="BikeSharingTest.registerUser_Add" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Trabalho_ES2_JAP [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BikeSharingTest.registerUser_Add&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -574,18 +589,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.BikeSharingTest" />
-      <item itemvalue="Gradle.BikeSharingTest.registerUser_Add" />
       <item itemvalue="JUnit.BikeSharingTest.registerUser_Add" />
       <item itemvalue="JUnit.BikeSharingTest" />
       <item itemvalue="JUnit.BikeSharingTest.credit_add" />
+      <item itemvalue="Gradle.Trabalho_ES2_JAP [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Trabalho_ES2_JAP [build]" />
         <item itemvalue="JUnit.BikeSharingTest" />
         <item itemvalue="JUnit.BikeSharingTest.registerUser_Add" />
         <item itemvalue="JUnit.BikeSharingTest.credit_add" />
         <item itemvalue="Gradle.BikeSharingTest" />
-        <item itemvalue="Gradle.BikeSharingTest.registerUser_Add" />
       </list>
     </recent_temporary>
   </component>
@@ -603,9 +618,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BikeSharingTest_credit_add - 2018.11.14 at 16h 42m 22s.xml">
-      <configuration name="BikeSharingTest.credit_add" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BikeSharingTest - 2018.11.14 at 16h 45m 12s.xml">
       <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
@@ -633,12 +645,15 @@
     <history-entry file="BikeSharingTest - 2018.11.14 at 17h 08m 56s.xml">
       <configuration name="BikeSharingTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BikeSharingTest - 2018.11.15 at 14h 38m 09s.xml">
+      <configuration name="BikeSharingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -648,21 +663,21 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4409836" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19575857" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19575857" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32789558" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.15634441" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
@@ -712,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="224">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -721,10 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="396" lean-forward="true" selection-start-line="396" selection-end-line="396" />
-          <folding>
-            <element signature="e#13767#13768#0" expanded="true" />
-            <element signature="e#13817#13818#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BikeSharingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="401">
+          <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
