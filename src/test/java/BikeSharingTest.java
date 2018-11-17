@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BikeSharingTest {
 
-
     /**
      * TESTE ID RU1
      * Testa se é lançada uma excepção ao criar um utilizador que já exista
@@ -42,7 +41,6 @@ public class BikeSharingTest {
         i.registerUser(1,"nome", 2);
         assertEquals(2, i.getUsers().size());
     }
-
 
     /**
      * TESTE CA1
@@ -284,13 +282,14 @@ public class BikeSharingTest {
      * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
      * @throws UserDoesNotExists Lança exceção quando user não existe
      */
-    @Test //Falta de credito, e espera -1
+    @Test
     public void testId_GB3() throws UserAlreadyExists, UserDoesNotExists {
         BikeRentalSystem i = new BikeRentalSystem(10);
         i.addBicycle(1,1,1);
         i.registerUser(1,"nome",1);
         assertEquals(-1, i.getBicycle(1,1,1));
     }
+
     /**
      * TESTE GB4
      *
@@ -489,13 +488,14 @@ public class BikeSharingTest {
      * Testa se o rentalProgram é permitido com o valor 0
      *
      */
-
     @Test
     public void testID_F_BRF2(){
         BikeRentalSystem i = new BikeRentalSystem(10);
         int rentalvalue = i.bicycleRentalFee(0, 10, 30, 4);
         assertEquals(rentalvalue, 0);
-    }    /**
+    }
+
+    /**
      * TESTE F_BRF3
      *
      * Testa se o rentalProgram é permitido com o valor 3
@@ -579,13 +579,13 @@ public class BikeSharingTest {
      * Testa se é permitido que o startime seja igual ao endtime
      *
      */
-
     @Test
     public void testID_F_BRF9(){
         BikeRentalSystem i = new BikeRentalSystem(10);
         int rentalvalue = i.bicycleRentalFee(1, 10, 10, 4);
         assertEquals(rentalvalue, (10 - 10) * 10);
     }
+
     /**
      * TESTE F_BRF10
      *
@@ -623,5 +623,158 @@ public class BikeSharingTest {
         BikeRentalSystem i = new BikeRentalSystem(10);
         int rentalvalue = i.bicycleRentalFee(1, 10, 30, 0);
         assertEquals(rentalvalue, (30 - 10) * 10);
+    }
+
+    /**
+     * TESTE F_GB1
+     *
+     * Testa se não executa com um user com id -1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB1() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(-1,"nome",1);
+        i.addCredit(-1,20);
+        assertEquals(-1, i.getBicycle(1,-1,1));
+    }
+
+    /**
+     * TESTE F_GB2
+     *
+     * Testa se executa com um user com id 0
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB2() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(0,"nome",1);
+        i.addCredit(0,20);
+        assertEquals(1, i.getBicycle(1,0,1));
+    }
+
+    /**
+     * TESTE F_GB3
+     *
+     * Testa se executa com um user com id 1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB3() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(1, i.getBicycle(1,1,1));
+    }
+
+    /**
+     * TESTE F_GB4
+     *
+     * Testa se não executa com um deposit com id -1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB4() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(-1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(-1, i.getBicycle(-1,1,1));
+    }
+
+    /**
+     * TESTE F_GB5
+     *
+     * Testa se executa com um deposit com id 0
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB5() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(0,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(-1, i.getBicycle(0,1,1));
+    }
+
+    /**
+     * TESTE F_GB6
+     *
+     * Testa se executa com um deposit com id 1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB6() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(1, i.getBicycle(1,1,1));
+    }
+
+    /**
+     * TESTE F_GB7
+     *
+     * Testa se não executa com o startTime -1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB7() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(-1, i.getBicycle(1,1,-1));
+    }
+
+    /**
+     * TESTE F_GB8
+     *
+     * Testa se executa com o startTime 0
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB8() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(1, i.getBicycle(1,1,0));
+    }
+
+    /**
+     * TESTE F_GB9
+     *
+     * Testa se executa com o startTime 1
+     *
+     * @throws UserAlreadyExists
+     * @throws UserDoesNotExists
+     */
+    @Test
+    public void testId_F_GB9() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1,1,1);
+        i.registerUser(1,"nome",1);
+        i.addCredit(1,20);
+        assertEquals(1, i.getBicycle(1,1,1));
     }
 }
