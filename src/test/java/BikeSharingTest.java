@@ -696,7 +696,7 @@ public class BikeSharingTest {
     /**
      * TESTE F_GB5
      *
-     * Testa se executa com um deposit com id 0
+     * Testa se não executa com um deposit com id 0
      *
      * @throws UserAlreadyExists
      * @throws UserDoesNotExists
@@ -759,23 +759,6 @@ public class BikeSharingTest {
         i.registerUser(1,"nome",1);
         i.addCredit(1,20);
         assertEquals(1, i.getBicycle(1,1,0));
-    }
-
-    /**
-     * TESTE F_GB9
-     *
-     * Testa se executa com o startTime 1
-     *
-     * @throws UserAlreadyExists
-     * @throws UserDoesNotExists
-     */
-    @Test
-    public void testId_F_GB9() throws UserAlreadyExists, UserDoesNotExists {
-        BikeRentalSystem i = new BikeRentalSystem(10);
-        i.addBicycle(1,1,1);
-        i.registerUser(1,"nome",1);
-        i.addCredit(1,20);
-        assertEquals(1, i.getBicycle(1,1,1));
     }
 
     /**
@@ -1022,5 +1005,33 @@ public class BikeSharingTest {
         assertEquals(list.get(0).getCredit(), 500 - i.bicycleRentalFee(1,0,0,5));
     }
 
-}
+    /**
+     * TESTE F_VC1
+     *
+     * Testa se não verefica o credito de um user com id -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_VC1() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(-1, "nome", 1);
+        i.addCredit(-1, 500);
+        assertFalse(i.verifyCredit(-1));
+    }
 
+    /**
+     * TESTE F_VC2
+     *
+     * Testa se verefica o credito de um user com id 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_VC2() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(0, "nome", 1);
+        i.addCredit(0, 500);
+        assertTrue(i.verifyCredit(0));
+    }
+}
