@@ -882,4 +882,145 @@ public class BikeSharingTest {
         i.addCredit(1, 1);
         assertEquals(11, list.get(0).getCredit());
     }
+
+    /**
+     * TESTE F_RB1
+     *
+     * Testa se o iduser é permitido com o valor -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB1() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(-1, "nome", 1);
+        i.addCredit(-1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,-1, 10);
+        int retorna = i.returnBicycle(1, -1, 20);
+        assertEquals(retorna, -1);
+
+    }
+
+    /**
+     * TESTE F_RB2
+     *
+     * Testa se o iduser é permitido com o valor 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB2() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(0, "nome", 1);
+        i.addCredit(0, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,0, 10);
+        i.returnBicycle(1, 0, 20);
+        List<User> list = i.getUsers();
+        assertEquals(list.get(0).getCredit(), 500 - i.bicycleRentalFee(1,10,20,5));
+    }
+
+    /**
+     * TESTE F_RB3
+     *
+     * Testa se o iddeposit é permitido com o valor -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB3() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(-1,1,1);
+        i.getBicycle(-1,1, 10);
+        int retorna = i.returnBicycle(-1, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    /**
+     * TESTE F_RB4
+     *
+     * Testa se o iddeposit é permitido com o valor 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB4() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(0,1,1);
+        i.getBicycle(0,1, 10);
+        int retorna = i.returnBicycle(0, 1, 20);
+        assertEquals(retorna, -1);
+    }
+
+    /**
+     * TESTE F_RB5
+     *
+     * Testa se o iddeposit é permitido com o valor 1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB5() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 10);
+        i.returnBicycle(1, 1, 20);
+        List<User> list = i.getUsers();
+        assertEquals(list.get(0).getCredit(), 500 - i.bicycleRentalFee(1,10,20,5));
+    }
+
+    /**
+     * TESTE F_RB6
+     *
+     * Testa se o endtime é permitido com o valor -1
+
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB6() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 1);
+        int retorna = i.returnBicycle(1, 1, -1);
+        assertEquals(retorna, -1);
+    }
+
+    /**
+     * TESTE F_RB7
+     *
+     * Testa se o endtime é permitido com o valor 0
+
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_F_RB7() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 0);
+        i.returnBicycle(1, 1, 0);
+        List<User> list = i.getUsers();
+        assertEquals(list.get(0).getCredit(), 500 - i.bicycleRentalFee(1,0,0,5));
+    }
+
 }
+
