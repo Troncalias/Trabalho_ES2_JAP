@@ -50,14 +50,14 @@ public class BikeSharingTest {
      * Testa se o crédito do utilizador é somado ao adicionar o crédito
      */
     @Test
-    public void testId_CA1() throws UserAlreadyExists {
+    public void testId_AC1() throws UserAlreadyExists {
         BikeRentalSystem i = new BikeRentalSystem(10);
         i.registerUser(1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
         i.addCredit(1, 20);
         i.addCredit(1, 30);
-        List<User> list = i.getUsers();
-        assertEquals(50, list.get(0).getCredit());
-
+        assertEquals(60, list.get(0).getCredit());
     }
 
     /**
@@ -338,9 +338,135 @@ public class BikeSharingTest {
     @Test
     public void testId_GB6() throws UserAlreadyExists, UserDoesNotExists {
         BikeRentalSystem i = new BikeRentalSystem(10);
-        i.addBicycle(1,1,1);
-        i.registerUser(1,"nome",1);
-        i.addCredit(1,20);
-        assertEquals(1, i.getBicycle(1,1,1));
+        i.addBicycle(1, 1, 1);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 20);
+        assertEquals(1, i.getBicycle(1, 1, 1));
+    }
+
+    /**
+     * TESTE F_RU1
+     *
+     * Testa se não adiciona user com id -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU1() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(-1,"nome", 2);
+        assertEquals(0, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU2
+     *
+     * Testa se adiciona user com id 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU2() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(0,"nome", 2);
+        assertEquals(1, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU3
+     *
+     * Testa se adiciona user com id 1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU3() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,"nome", 2);
+        assertEquals(1, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU4
+     *
+     * Testa se adiciona user com name null
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU4() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,null, 2);
+        assertEquals(0, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU5
+     *
+     * Testa se adiciona user com name "nome"
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU5() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,"nome", 2);
+        assertEquals(1, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU6
+     *
+     * Testa se adiciona user com rentalProgram 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU6() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,"nome", 0);
+        assertEquals(0, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU7
+     *
+     * Testa se adiciona user com rentalProgram 1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU7() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,"nome", 1);
+        assertEquals(1, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU8
+     *
+     * Testa se adiciona user com rentalProgram 2
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU8() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1,"nome", 2);
+        assertEquals(1, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_RU9
+     *
+     * Testa se adiciona user com rentalProgram 3
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_RU9() throws UserAlreadyExists { //ver se adiciona user com rentalProgram 3 (não passar)
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 3);
+        assertEquals(0, i.getUsers().size());
     }
 }
