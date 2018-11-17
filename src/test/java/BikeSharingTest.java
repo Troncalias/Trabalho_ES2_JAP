@@ -464,9 +464,164 @@ public class BikeSharingTest {
      * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
      */
     @Test
-    public void testId_F_RU9() throws UserAlreadyExists { //ver se adiciona user com rentalProgram 3 (não passar)
+    public void testId_F_RU9() throws UserAlreadyExists {
         BikeRentalSystem i = new BikeRentalSystem(10);
         i.registerUser(1, "nome", 3);
         assertEquals(0, i.getUsers().size());
+    }
+
+    /**
+     * TESTE F_BRF1
+     *
+     * Testa se o rentalProgram é permitido com o valor -1
+     *
+     */
+    @Test
+    public void testID_F_BRF1(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(-1, 10, 30, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF2
+     *
+     * Testa se o rentalProgram é permitido com o valor 0
+     *
+     */
+
+    @Test
+    public void testID_F_BRF2(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(0, 10, 30, 4);
+        assertEquals(rentalvalue, 0);
+    }    /**
+     * TESTE F_BRF3
+     *
+     * Testa se o rentalProgram é permitido com o valor 3
+     *
+     */
+    @Test
+    public void testID_F_BRF3(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(3, 10, 30, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF4
+     *
+     * Testa se o startime é permitido com o valor -1
+     *
+     */
+    @Test
+    public void testID_F_BRF4(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, -1, 30, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF5
+     *
+     * Testa se o startime é permitido com o valor 0
+     *
+     */
+    @Test
+    public void testID_F_BRF5(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 0, 30, 4);
+        assertEquals(rentalvalue, (30 - 0) * 10);
+    }
+
+    /**
+     * TESTE F_BRF6
+     *
+     * Testa se o endtime é permitido com o valor -1
+     *
+     */
+    @Test
+    public void testID_F_BRF6(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 10, -1, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF7
+     *
+     * Testa se o endtime é permitido com o valor 0
+     *
+     */
+    @Test
+    public void testID_F_BRF7(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 0, 0, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF8
+     *
+     * Testa se é permitido que o startime seja maior que o endtime
+     *
+     */
+    @Test
+    public void testID_F_BRF8(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 30, 10, 4);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF9
+     *
+     * Testa se é permitido que o startime seja igual ao endtime
+     *
+     */
+
+    @Test
+    public void testID_F_BRF9(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 10, 10, 4);
+        assertEquals(rentalvalue, (10 - 10) * 10);
+    }
+    /**
+     * TESTE F_BRF10
+     *
+     * Testa se é permitido que o startime seja menor ao endtime
+     *
+     */
+    @Test
+    public void testID_F_BRF10(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 10, 30, 4);
+        assertEquals(rentalvalue, (30 - 10) * 10);
+    }
+
+    /**
+     * TESTE F_BRF11
+     *
+     * Testa se o nRentals é permitido com o valor -1
+     *
+     */
+    @Test
+    public void testID_F_BRF11(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 10, 30, -1);
+        assertEquals(rentalvalue, 0);
+    }
+
+    /**
+     * TESTE F_BRF12
+     *
+     * Testa se o nRentals é permitido com o valor 0
+     *
+     */
+    @Test
+    public void testID_F_BRF12(){
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        int rentalvalue = i.bicycleRentalFee(1, 10, 30, 0);
+        assertEquals(rentalvalue, (30 - 10) * 10);
     }
 }
