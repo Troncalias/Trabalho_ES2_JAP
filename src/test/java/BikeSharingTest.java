@@ -777,4 +777,109 @@ public class BikeSharingTest {
         i.addCredit(1,20);
         assertEquals(1, i.getBicycle(1,1,1));
     }
+
+    /**
+     * TESTE F_AC1
+     *
+     * Testa se adiciona credit a um user com id -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC1() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(-1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(-1, 20);
+        i.addCredit(-1, 30);
+        assertEquals(0, list.get(0).getCredit());
+    }
+
+    /**
+     * TESTE F_AC2
+     *
+     * Testa se adiciona credit a um user com id 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC2() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(0, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(0, 20);
+        i.addCredit(0, 30);
+        assertEquals(60, list.get(0).getCredit());
+    }
+
+    /**
+     * TESTE F_AC3
+     *
+     * Testa se adiciona credit a um user com id 1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC3() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(1, 20);
+        i.addCredit(1, 30);
+        assertEquals(60, list.get(0).getCredit());
+    }
+
+    /**
+     * TESTE F_AC4
+     *
+     * Testa se adiciona credit com amount -1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC4() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(1, -1);
+        assertEquals(10, list.get(0).getCredit());
+    }
+
+    /**
+     * TESTE F_AC5
+     *
+     * Testa se adiciona credit com amount 0
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC5() throws UserAlreadyExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(1, 0);
+        assertEquals(10, list.get(0).getCredit());
+    }
+
+    /**
+     * TESTE F_AC6
+     *
+     * Testa se adiciona credit com amount 1
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     */
+    @Test
+    public void testId_F_AC6() throws UserAlreadyExists { //ver se adicionar credit com amount 1 (passou)
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        List<User> list = i.getUsers();
+        list.get(0).setCredit(10);
+        i.addCredit(1, 1);
+        assertEquals(11, list.get(0).getCredit());
+    }
 }
