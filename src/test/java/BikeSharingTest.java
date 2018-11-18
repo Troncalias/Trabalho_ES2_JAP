@@ -363,6 +363,24 @@ public class BikeSharingTest {
     }
 
     /**
+     * TESTE GB7
+     *
+     * Testa se o lugar fica desocupado quando uma bicicleta é retirada
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_GB7() throws UserAlreadyExists, UserDoesNotExists {
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.addBicycle(1, 1, 1);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 20);
+        i.getBicycle(1, 1, 1);
+        assertEquals(false, i.getDeposits().get(0).getLocks().get(0).isInUse());
+    }
+
+    /**
      * TESTE F_RU1
      *
      * Testa se não adiciona user com id -1
