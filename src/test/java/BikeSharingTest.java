@@ -243,6 +243,25 @@ public class BikeSharingTest {
     }
 
     /**
+     * TESTE RB7
+     *
+     * Testa se o returnBicycle, quando executado com sucesso, retorna o valor atual
+     * do saldo do utilizador que devolve a bicicleta
+     *
+     * @throws UserAlreadyExists Lança exceção quando se tenta criar um user que já existe
+     * @throws UserDoesNotExists Lança exceção quando user não existe
+     */
+    @Test
+    public void testId_RB7() throws UserAlreadyExists, UserDoesNotExists { //User, deposito e bike associada existem e lugar livre
+        BikeRentalSystem i = new BikeRentalSystem(10);
+        i.registerUser(1, "nome", 1);
+        i.addCredit(1, 500);
+        i.addBicycle(1,1,1);
+        i.getBicycle(1,1, 10);
+        assertEquals(500 - i.bicycleRentalFee(1,10,20,5), i.returnBicycle(1, 1, 20));
+    }
+
+    /**
      * TESTE GB1
      *
      * IdUser não registado, espera erro
